@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment - Agrotech Insight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); /* Original green gradient */
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b; /* Dark text for readability */
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Georgia', serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #f0fdf4, #dcfce7); /* Original hero gradient */
+    }
+    header h1 {
+      color: #1e3a2e; /* Dark green for Agrotech Insight heading */
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      background-color: #ffffff; /* Light card background */
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(21, 128, 61, 0.15);
+    }
+    .btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      background-color: #16a34a; /* Green button */
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 50%; /* Circular button for arrow */
+    }
+    .btn:hover {
+      background-color: #14532d;
+      transform: scale(1.1);
+    }
+    .note {
+      background-color: #e6fff2;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid #16a34a;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+      color: #065f46;
+    }
+    .calculator {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Dark Heading and Styled Back Button -->
+  <header class="bg-green-700 shadow py-6">
+    <div class="container mx-auto text-center flex justify-center items-center space-x-4">
+      <h1 class="text-3xl font-bold">Agrotech Insight</h1>
+      <a href="index.html" class="btn inline-block"><i class="fas fa-arrow-left"></i></a>
+      <!-- Note: Ensure index.html exists in the same directory for the link to work. -->
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero py-24 px-4 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-5xl font-extrabold text-green-900 mb-6">Agricultural Equipment Guide</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">Explore the latest equipment for modern farming as of 06:20 PM WAT, Tuesday, July 22, 2025.</p>
+      <!-- Note: Consider adding a slideshow of equipment images (e.g., using a JavaScript carousel like Swiper.js). -->
+    </div>
+  </section>
+
+  <!-- Types of Equipment Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-10 text-center">Types of Agricultural Equipment</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Tractors</h3>
+          <p class="text-sm text-gray-600">Versatile machines for plowing, planting, and harvesting with 50-100 HP options.</p>
+          <!-- Note: Add a spec table (e.g., <table><tr><td>HP</td><td>50-100</td></tr></table>) for detailed specs. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Irrigation Systems</h3>
+          <p class="text-sm text-gray-600">Drip and sprinkler systems saving up to 60% water usage.</p>
+          <!-- Note: Include a video demo link (e.g., <a href="video-link">Watch Demo</a>) or embed a YouTube video. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Harvesters</h3>
+          <p class="text-sm text-gray-600">Automated tools reducing harvest time by 70%.</p>
+          <!-- Note: Add a comparison chart with manual harvesting (e.g., using a canvas panel). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Seed Drills</h3>
+          <p class="text-sm text-gray-600">Precision planting for maize, yam, and beans with 95% accuracy.</p>
+          <!-- Note: Suggest compatible crops and seed rates (e.g., 10-15 kg/ha for maize). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Plows</h3>
+          <p class="text-sm text-gray-600">Manual and motorized options for soil preparation.</p>
+          <!-- Note: Add a durability rating (e.g., 5/5) or cost estimate (e.g., ₦50,000-₦200,000). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Sprayers</h3>
+          <p class="text-sm text-gray-600">Efficient pesticide and fertilizer application tools.</p>
+          <!-- Note: Include safety guidelines or a maintenance video link. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-8">Benefits of Modern Equipment</h2>
+      <ul class="list-disc text-lg text-gray-700 max-w-2xl mx-auto space-y-5">
+        <li>Increases productivity with faster and efficient farming.</li>
+        <li>Reduces labor costs by automating repetitive tasks.</li>
+        <li>Improves crop quality with precision technology.</li>
+        <li>Enhances sustainability through optimized resource use.</li>
+        <li>Boosts profitability with higher yields and market readiness.</li>
+        <li>Supports scalability for small to large farms.</li>
+        <!-- Note: Add icons next to each benefit (e.g., <i class="fas fa-tractor"></i>) or a visual infographic. -->
+      </ul>
+      <a href="#benefits-details" class="mt-8 inline-block bg-green-700 text-white px-6 py-3 rounded-lg font-semibold btn">Learn More Benefits</a>
+      <!-- Note: Link this to a detailed benefits page or expand with farmer testimonials. -->
+    </div>
+  </section>
+
+  <!-- Maintenance Tips Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Equipment Maintenance Tips</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Regular Cleaning</h3>
+          <p class="text-sm text-gray-600">Remove dirt and debris after each use to prevent wear.</p>
+          <!-- Note: Add a checklist (e.g., <ul><li>Check filters</li><li>Clean blades</li></ul>) or video tutorial link. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Lubrication</h3>
+          <p class="text-sm text-gray-600">Apply oil to moving parts every 50 hours of operation.</p>
+          <!-- Note: Specify oil types (e.g., SAE 30) or provide a downloadable maintenance schedule. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Inspection</h3>
+          <p class="text-sm text-gray-600">Check for damages before and after each season.</p>
+          <!-- Note: Include a downloadable checklist (e.g., <a href="checklist.pdf">Download</a>) or interactive form. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Storage</h3>
+          <p class="text-sm text-gray-600">Store in a dry place to avoid rust and damage.</p>
+          <!-- Note: Add a storage guide image or video (e.g., <img src="storage.jpg">). -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Comparison Section -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Equipment Comparison</h2>
+      <table class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <thead>
+          <tr class="bg-green-700 text-white">
+            <th class="p-3">Equipment</th>
+            <th class="p-3">Cost (₦)</th>
+            <th class="p-3">Efficiency</th>
+            <th class="p-3">Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-gray-700">
+            <td class="p-3">Tractor</td>
+            <td class="p-3">1,500,000</td>
+            <td class="p-3">90%</td>
+            <td class="p-3">Large Farms</td>
+          </tr>
+          <tr class="text-gray-700">
+            <td class="p-3">Irrigation System</td>
+            <td class="p-3">300,000</td>
+            <td class="p-3">85%</td>
+            <td class="p-3">Water-Scarce Areas</td>
+          </tr>
+          <tr class="text-gray-700">
+            <td class="p-3">Harvester</td>
+            <td class="p-3">2,000,000</td>
+            <td class="p-3">95%</td>
+            <td class="p-3">Commercial Crops</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Note: Update costs and data dynamically with a backend API or allow user input for custom comparisons. -->
+    </div>
+  </section>
+
+  <!-- Financing Options Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Equipment Financing Options</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Bank Loans</h3>
+          <p class="text-sm text-gray-600">Low-interest loans up to ₦5 million with 5-year repayment.</p>
+          <!-- Note: Add a loan application link (e.g., <a href="loan-form.html">Apply Now</a>). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Government Grants</h3>
+          <p class="text-sm text-gray-600">Subsidies available for smallholder farmers in 2025.</p>
+          <!-- Note: Include eligibility criteria or a contact for inquiries. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Leasing Programs</h3>
+          <p class="text-sm text-gray-600">Rent equipment with flexible monthly payments.</p>
+          <!-- Note: Add a calculator for lease costs (e.g., integrate with the calculator below). -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Cost Calculator Section -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-8">Equipment Cost Calculator</h2>
+      <div class="calculator">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="equipmentType">Select Equipment</label>
+          <select id="equipmentType" class="w-full p-2 border border-gray-300 rounded-lg">
+            <option value="tractor">Tractor (₦1,500,000)</option>
+            <option value="irrigation">Irrigation System (₦300,000)</option>
+            <option value="harvester">Harvester (₦2,000,000)</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="quantity">Quantity</label>
+          <input type="number" id="quantity" class="w-full p-2 border border-gray-300 rounded-lg" min="1" value="1">
+        </div>
+        <button id="calculateCost" class="btn bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md">Calculate Cost</button>
+        <p id="totalCost" class="mt-4 text-lg text-green-800 font-semibold"></p>
+      </div>
+      <!-- Note: Enhance with payment plan options or save results to user profile (requires backend). -->
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 px-4 bg-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-6">Upgrade Your Farm Today</h2>
+      <p class="text-lg text-gray-700 mb-6">Explore the best equipment deals starting July 22, 2025. Contact us for personalized recommendations.</p>
+      <button class="btn bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md">Get Equipment Now</button>
+      <!-- Note: Integrate a modal popup for inquiries (e.g., using JavaScript) to enhance user engagement. -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white px-4 py-8 text-center">
+    <p class="text-sm">© 2025 Agrotech Insight. All rights reserved.</p>
+    <!-- Note: Add social media links (e.g., <a href="facebook.com"><i class="fab fa-facebook"></i></a>) for broader reach. -->
+  </footer>
+
+  <!-- JavaScript for Calculator -->
+  <script>
+    const calculateCost = document.getElementById('calculateCost');
+    const equipmentType = document.getElementById('equipmentType');
+    const quantity = document.getElementById('quantity');
+    const totalCost = document.getElementById('totalCost');
+
+    calculateCost.addEventListener('click', () => {
+      const basePrices = {
+        tractor: 1500000,
+        irrigation: 300000,
+        harvester: 2000000
+      };
+      const selectedEquipment = equipmentType.value;
+      const qty = parseInt(quantity.value) || 1;
+      const cost = basePrices[selectedEquipment] * qty;
+      totalCost.textContent = `Total Cost: ₦${cost.toLocaleString()}`;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Recommender - Agrotech Insight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Georgia', serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #f0fdf4, #dcfce7);
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(21, 128, 61, 0.15);
+    }
+    .input-group {
+      transition: all 0.3s ease;
+    }
+    .input-group:focus-within {
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    }
+    .btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #14532d;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="text-gray-900">
+
+  <!-- Hero Section -->
+  <section class="hero py-20 px-4 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-5xl font-extrabold text-green-900 mb-6">AI Recommender</h1>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10">Unlock personalized agriculture solutions with our advanced AI. Provide your farm details to receive tailored recommendations.</p>
+    </div>
+  </section>
+
+  <!-- AI Input Form -->
+  <section class="py-12 px-4 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-green-50 p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-green-900 mb-6">Enter Your Farm Details</h2>
+        <form id="aiForm" class="space-y-6">
+          <!-- Crop Type -->
+          <div class="input-group border border-gray-300 rounded-lg p-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Crop Type</label>
+            <select class="w-full p-2 border-none focus:ring-0 text-gray-900 bg-transparent" id="cropType">
+              <option value="">Select a crop</option>
+              <option value="maize">Maize</option>
+              <option value="yam">Yam</option>
+              <option value="tomatoes">Tomatoes</option>
+              <option value="beans">Beans</option>
+            </select>
+          </div>
+
+          <!-- Region -->
+          <div class="input-group border border-gray-300 rounded-lg p-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Region</label>
+            <select class="w-full p-2 border-none focus:ring-0 text-gray-900 bg-transparent" id="region">
+              <option value="">Select a region</option>
+              <option value="north">Northern Nigeria</option>
+              <option value="south">Southern Nigeria</option>
+              <option value="east">Eastern Nigeria</option>
+              <option value="west">Western Nigeria</option>
+            </select>
+          </div>
+
+          <!-- Farm Size -->
+          <div class="input-group border border-gray-300 rounded-lg p-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Farm Size (hectares)</label>
+            <input type="number" id="farmSize" placeholder="e.g., 2.5" class="w-full p-2 border-none focus:ring-0 text-gray-900 bg-transparent" min="0" step="0.1">
+          </div>
+
+          <!-- Needs/Goals -->
+          <div class="input-group border border-gray-300 rounded-lg p-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Needs/Goals</label>
+            <div class="flex flex-col space-y-2">
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2" id="irrigation"> Irrigation Solutions
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2" id="fertilizer"> Fertilizer Recommendations
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2" id="pestControl"> Pest Control
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md w-full">Generate Recommendations</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations Section -->
+  <section class="py-12 px-4 bg-green-50" id="recommendations">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-green-900 mb-6">Your Personalized Recommendations</h2>
+      <div id="recommendationList" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Recommendations will be dynamically populated here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white px-4 py-8 text-center">
+    <p class="text-sm">© 2025 Agrotech Insight. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Form Submission -->
+  <script>
+    const aiForm = document.getElementById('aiForm');
+    const recommendationList = document.getElementById('recommendationList');
+    const cropType = document.getElementById('cropType');
+    const region = document.getElementById('region');
+    const farmSize = document.getElementById('farmSize');
+    const irrigation = document.getElementById('irrigation');
+    const fertilizer = document.getElementById('fertilizer');
+    const pestControl = document.getElementById('pestControl');
+
+    aiForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const crop = cropType.value;
+      const regionValue = region.value;
+      const size = farmSize.value;
+      const needs = [irrigation.checked, fertilizer.checked, pestControl.checked]
+        .filter(Boolean)
+        .map(need => need.id.replace('Control', ''))
+        .join(', ');
+
+      if (crop && regionValue && size) {
+        // Placeholder for AI recommendation logic (replace with actual API call)
+        recommendationList.innerHTML = `
+          <div class="card bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+            <h4 class="text-lg font-semibold text-green-800">Recommendation 1</h4>
+            <p class="text-sm text-gray-600">For ${crop} in ${regionValue} (${size} ha): Use ${needs || 'general'} practices for optimal yield.</p>
+          </div>
+          <div class="card bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+            <h4 class="text-lg font-semibold text-green-800">Recommendation 2</h4>
+            <p class="text-sm text-gray-600">Consider ${needs.includes('irrigation') ? 'drip irrigation' : 'soil testing'} to enhance productivity.</p>
+          </div>
+        `;
+      } else {
+        alert('Please fill in all required fields!');
+      }
+    });
+  </script>
+</body>
+</html>

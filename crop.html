@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crop Management | Agrotech Insight</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-green-700 text-white p-4 shadow-md">
+    <div class="flex justify-between items-center">
+      <h1 class="text-xl font-bold">Agrotech Insight</h1>
+      <a href="index.html" class="bg-white text-green-700 px-4 py-2 rounded hover:bg-green-100 font-semibold">
+        ← Back to Home
+      </a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="p-6 text-center bg-green-100 shadow-md">
+    <h2 class="text-3xl font-bold mb-2">Crop Management</h2>
+    <p class="text-lg text-gray-600">A detailed guide to growing, protecting, and harvesting essential crops in Nigeria and Africa.</p>
+    
+    <!-- Search Bar -->
+    <div class="mt-4">
+      <input id="searchInput" type="text" placeholder="Search for a crop..." class="p-2 border border-green-300 rounded w-1/2">
+    </div>
+  </header>
+
+  <!-- Crop Buttons -->
+  <div class="p-4 flex flex-wrap gap-2 justify-center">
+    <button onclick="scrollToCrop('maize')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Maize</button>
+    <button onclick="scrollToCrop('rice')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Rice</button>
+    <button onclick="scrollToCrop('tomato')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Tomato</button>
+    <button onclick="scrollToCrop('pepper')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Pepper</button>
+    <button onclick="scrollToCrop('cassava')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Cassava</button>
+    <button onclick="scrollToCrop('yam')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Yam</button>
+    <button onclick="scrollToCrop('beans')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Beans</button>
+    <button onclick="scrollToCrop('soybean')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Soybean</button>
+  </div>
+
+  <!-- Crop Sections -->
+  <div class="p-6 space-y-12" id="cropContent">
+
+    <!-- Sample crop content -->
+    <section id="maize">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🌽 Maize Farming</h3>
+      <p><strong>Steps:</strong> Land clearing → Ploughing → Planting → Weeding → Fertilizer application → Pest control → Harvesting</p>
+      <p><strong>Pests/Diseases:</strong> Stem borers, armyworms, smut, leaf blight</p>
+      <p><strong>Control:</strong> Use resistant varieties, timely planting, and pesticides like cypermethrin or neem spray.</p>
+    </section>
+
+    <section id="rice">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🌾 Rice Farming</h3>
+      <p><strong>Steps:</strong> Seed selection → Nursery preparation → Transplanting → Water control → Fertilizer use → Weed/pest control → Harvest</p>
+      <p><strong>Pests/Diseases:</strong> Rice blast, brown planthopper, sheath blight</p>
+      <p><strong>Control:</strong> Drain fields occasionally, use fungicides and resistant varieties.</p>
+    </section>
+
+    <section id="tomato">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🍅 Tomato Farming</h3>
+      <p><strong>Steps:</strong> Nursery setup → Transplanting → Staking → Watering → Fertilizer → Pest/Disease control</p>
+      <p><strong>Pests/Diseases:</strong> Tuta absoluta, whiteflies, bacterial wilt</p>
+      <p><strong>Control:</strong> Netting, neem oil, crop rotation, proper irrigation</p>
+    </section>
+
+    <section id="pepper">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🌶️ Pepper Farming</h3>
+      <p><strong>Steps:</strong> Nursery → Transplant → Watering → Fertilization → Mulching</p>
+      <p><strong>Pests/Diseases:</strong> Aphids, fruit rot, wilt</p>
+      <p><strong>Control:</strong> Neem spray, remove infected plants, use drip irrigation</p>
+    </section>
+
+    <section id="cassava">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🍠 Cassava Farming</h3>
+      <p><strong>Steps:</strong> Cut stem selection → Planting → Weeding → Harvest after 9–12 months</p>
+      <p><strong>Pests/Diseases:</strong> Mealybugs, cassava mosaic disease</p>
+      <p><strong>Control:</strong> Disease-free stems, early planting, biological control</p>
+    </section>
+
+    <section id="yam">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🍠 Yam Farming</h3>
+      <p><strong>Steps:</strong> Heap/ridge making → Seed yam planting → Mulching → Weeding → Training vines → Harvest</p>
+      <p><strong>Pests/Diseases:</strong> Yam beetles, anthracnose</p>
+      <p><strong>Control:</strong> Crop rotation, neem application, clean seed yams</p>
+    </section>
+
+    <section id="beans">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🫘 Beans Farming</h3>
+      <p><strong>Steps:</strong> Land prep → Planting in rows → Weeding → Irrigation → Harvest in 8–12 weeks</p>
+      <p><strong>Pests/Diseases:</strong> Bean beetles, aphids, anthracnose</p>
+      <p><strong>Control:</strong> Neem solution, resistant varieties, early planting</p>
+    </section>
+
+    <section id="soybean">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">🌱 Soybean Farming</h3>
+      <p><strong>Steps:</strong> Soil testing → Row planting → Fertilizer use → Watering → Pest control → Harvest</p>
+      <p><strong>Pests/Diseases:</strong> Pod borers, rust disease</p>
+      <p><strong>Control:</strong> Fungicides, row spacing, early harvesting</p>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center p-4 mt-12">
+    <p>&copy; 2025 Agrotech Insight | All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToCrop(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      const query = this.value.toLowerCase();
+      const sections = document.querySelectorAll("#cropContent section");
+      sections.forEach((sec) => {
+        const text = sec.innerText.toLowerCase();
+        sec.style.display = text.includes(query) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

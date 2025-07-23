@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainability - Agrotech Insight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); /* Original green gradient */
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b; /* Dark text for readability */
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Georgia', serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #f0fdf4, #dcfce7); /* Original hero gradient */
+    }
+    .hero h1 {
+      color: #1e3a2e; /* Dark green for the heading */
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      background-color: #ffffff; /* Light card background */
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(21, 128, 61, 0.15);
+    }
+    .btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      background-color: #16a34a; /* Green button */
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 50%; /* Circular button for arrow */
+    }
+    .btn:hover {
+      background-color: #14532d;
+      transform: scale(1.1);
+    }
+    .note {
+      background-color: #e6fff2;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid #16a34a;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+      color: #065f46;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Arrow Button -->
+  <header class="bg-green-700 shadow py-6">
+    <div class="container mx-auto text-center">
+      <a href="index.html" class="btn inline-block"><i class="fas fa-arrow-left"></i></a>
+      <!-- Note: Ensure index.html exists in the same directory for the link to work. -->
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero py-24 px-4 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-5xl font-extrabold mb-6">Sustainability in Agriculture</h1>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">Discover how sustainable farming practices can ensure food security, protect the environment, and support rural livelihoods for generations to come.</p>
+      <!-- Note: Consider adding a background image or video here for visual impact (e.g., <div class="bg-[url('farm.jpg')] bg-cover">). -->
+    </div>
+  </section>
+
+  <!-- Sustainable Practices Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-10 text-center">Sustainable Farming Practices</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Crop Rotation</h3>
+          <p class="text-sm text-gray-600">Alternating crops to maintain soil nutrients and reduce pest cycles.</p>
+          <!-- Note: Add an image here (e.g., <img src="crop-rotation.jpg" alt="Crop Rotation" class="w-full h-32 object-cover mb-2">) for better engagement. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Organic Farming</h3>
+          <p class="text-sm text-gray-600">Using natural fertilizers and avoiding synthetic pesticides for eco-health.</p>
+          <!-- Note: Include a statistic (e.g., "Reduces carbon footprint by 30%") to strengthen the point. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Water Conservation</h3>
+          <p class="text-sm text-gray-600">Techniques like drip irrigation and rainwater harvesting to optimize water use.</p>
+          <!-- Note: Add a link to a tutorial video (e.g., <a href="video-link">Watch Tutorial</a>) for practical guidance. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Agroforestry</h3>
+          <p class="text-sm text-gray-600">Combining trees with crops to enhance biodiversity and soil stability.</p>
+          <!-- Note: Consider adding a downloadable PDF guide here (e.g., <a href="guide.pdf">Download Guide</a>). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Cover Cropping</h3>
+          <p class="text-sm text-gray-600">Planting cover crops to prevent soil erosion and enrich the land.</p>
+          <!-- Note: This is an additional practice; expand with local examples if needed. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Integrated Pest Management</h3>
+          <p class="text-sm text-gray-600">Using natural predators and minimal chemicals to control pests.</p>
+          <!-- Note: Add a case study link or testimonial for credibility. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-8">Benefits of Sustainable Farming</h2>
+      <ul class="list-disc text-lg text-gray-700 max-w-2xl mx-auto space-y-5">
+        <li>Preserves soil fertility, ensuring long-term agricultural productivity.</li>
+        <li>Reduces greenhouse gas emissions, combating climate change effectively.</li>
+        <li>Enhances biodiversity, protecting local wildlife and ecosystems.</li>
+        <li>Boosts farmer income through lower input costs and premium markets.</li>
+        <li>Improves water quality by minimizing chemical runoff into rivers.</li>
+        <!-- Note: Add icons next to each benefit (e.g., <i class="fas fa-leaf"></i>) for visual appeal. -->
+      </ul>
+      <a href="#learn-more" class="mt-8 inline-block bg-green-700 text-white px-6 py-3 rounded-lg font-semibold btn">Explore Benefits in Detail</a>
+      <!-- Note: Link this to a dedicated benefits page or expand this section with a table. -->
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Challenges in Sustainable Farming</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Initial Costs</h3>
+          <p class="text-sm text-gray-600">High upfront investment in sustainable tools and techniques.</p>
+          <!-- Note: Suggest government subsidies or loans as solutions here. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Knowledge Gap</h3>
+          <p class="text-sm text-gray-600">Lack of awareness or training among farmers.</p>
+          <!-- Note: Add a link to training programs (e.g., <a href="training.html">Learn More</a>). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Market Access</h3>
+          <p class="text-sm text-gray-600">Limited demand for sustainable products in some regions.</p>
+          <!-- Note: Include a statistic (e.g., "70% of consumers prefer sustainable goods") to motivate action. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Success Stories</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Kaduna Organic Farm</h3>
+          <p class="text-sm text-gray-600">Increased yield by 25% using organic methods since 2023.</p>
+          <!-- Note: Add a photo or video testimonial (e.g., <video src="testimonial.mp4" controls></video>). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Enugu Agroforestry Project</h3>
+          <p class="text-sm text-gray-600">Reduced erosion by 40% with tree-crop integration.</p>
+          <!-- Note: Include a map or location link (e.g., <a href="maps.google.com">View Location</a>). -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools and Resources Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Tools & Resources</h2>
+      <ul class="list-disc text-lg text-gray-700 max-w-2xl mx-auto space-y-4">
+        <li><a href="#tool1" class="text-green-700 hover:text-green-900">Sustainable Farming App</a> - Track your eco-practices.</li>
+        <li><a href="#tool2" class="text-green-700 hover:text-green-900">Soil Health Guide</a> - Free PDF download.</li>
+        <li><a href="#tool3" class="text-green-700 hover:text-green-900">Webinar Series</a> - Monthly sustainability workshops.</li>
+        <!-- Note: Replace #tool1, #tool2, #tool3 with actual URLs or create linked pages. -->
+      </ul>
+      <div class="mt-6 text-center">
+        <button class="btn bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md">Access Resources</button>
+      </div>
+      <!-- Note: Add a form here (e.g., email signup) for resource access: <form><input type="email" placeholder="Enter email"><button type="submit">Subscribe</button></form>. -->
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 px-4 bg-green-50 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-6">Join the Sustainability Movement</h2>
+      <p class="text-lg text-gray-700 mb-6">Adopt sustainable practices to secure a greener future. Sign up for updates or contact our team for personalized support.</p>
+      <button class="btn bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md">Get Started Today</button>
+      <!-- Note: Integrate a modal popup for sign-up (e.g., using JavaScript) to enhance user engagement. -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white px-4 py-8 text-center">
+    <p class="text-sm">© 2025 Agrotech Insight. All rights reserved.</p>
+    <!-- Note: Add social media links (e.g., <a href="facebook.com"><i class="fab fa-facebook"></i></a>) for broader reach. -->
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market - Agrotech Insight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); /* Original green gradient */
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b; /* Dark text for readability */
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Georgia', serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #f0fdf4, #dcfce7); /* Original hero gradient */
+    }
+    header h1 {
+      color: #1e3a2e; /* Dark green for Agrotech Insight heading */
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      background-color: #ffffff; /* Light card background */
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(21, 128, 61, 0.15);
+    }
+    .btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      background-color: #16a34a; /* Green button */
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 50%; /* Circular button for arrow */
+    }
+    .btn:hover {
+      background-color: #14532d;
+      transform: scale(1.1);
+    }
+    .note {
+      background-color: #e6fff2;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid #16a34a;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+      color: #065f46;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Dark Heading and Styled Back Button -->
+  <header class="bg-green-700 shadow py-6">
+    <div class="container mx-auto text-center flex justify-center items-center space-x-4">
+      <h1 class="text-3xl font-bold">Agrotech Insight</h1>
+      <a href="index.html" class="btn inline-block"><i class="fas fa-arrow-left"></i></a>
+      <!-- Note: Ensure index.html exists in the same directory for the link to work. -->
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero py-24 px-4 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-5xl font-extrabold text-green-900 mb-6">Agricultural Market Insights</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">Stay updated with the latest market trends, prices, and opportunities as of 06:08 PM WAT, Tuesday, July 22, 2025.</p>
+      <!-- Note: Consider adding a dynamic clock or market update widget here (e.g., using JavaScript). -->
+    </div>
+  </section>
+
+  <!-- Market Trends Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-10 text-center">Current Market Trends</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Rising Demand for Organic Produce</h3>
+          <p class="text-sm text-gray-600">Organic crops see a 15% price increase due to growing consumer preference.</p>
+          <!-- Note: Add a chart (e.g., using a canvas panel) to visualize this trend. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Maize Price Surge</h3>
+          <p class="text-sm text-gray-600">Maize prices rose to ₦250/kg this week due to supply shortages.</p>
+          <!-- Note: Include a regional breakdown (e.g., North vs. South) for more detail. -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Export Opportunities</h3>
+          <p class="text-sm text-gray-600">Increased demand for yam exports to Europe reported this month.</p>
+          <!-- Note: Add a link to export regulations (e.g., <a href="export-guide.html">Learn More</a>). -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Data Section -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-8">Latest Price Data</h2>
+      <table class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <thead>
+          <tr class="bg-green-700 text-white">
+            <th class="p-3">Crop</th>
+            <th class="p-3">Price (₦/kg)</th>
+            <th class="p-3">Trend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-gray-700">
+            <td class="p-3">Maize</td>
+            <td class="p-3">250</td>
+            <td class="p-3 text-red-500">↑ 10%</td>
+          </tr>
+          <tr class="text-gray-700">
+            <td class="p-3">Yam</td>
+            <td class="p-3">350</td>
+            <td class="p-3 text-green-500">↓ 5%</td>
+          </tr>
+          <tr class="text-gray-700">
+            <td class="p-3">Tomatoes</td>
+            <td class="p-3">400</td>
+            <td class="p-3 text-red-500">↑ 15%</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Note: Update prices dynamically with a backend API or JavaScript for real-time data. -->
+      <a href="#price-details" class="mt-8 inline-block bg-green-700 text-white px-6 py-3 rounded-lg font-semibold btn">View Full Price List</a>
+    </div>
+  </section>
+
+  <!-- Market Tools Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Market Tools</h2>
+      <ul class="list-disc text-lg text-gray-700 max-w-2xl mx-auto space-y-4">
+        <li><a href="#tool1" class="text-green-700 hover:text-green-900">Price Tracker App</a> - Monitor real-time crop prices.</li>
+        <li><a href="#tool2" class="text-green-700 hover:text-green-900">Market Forecast Tool</a> - Predict future trends.</li>
+        <li><a href="#tool3" class="text-green-700 hover:text-green-900">Trade Network</a> - Connect with buyers and sellers.</li>
+        <!-- Note: Replace #tool1, #tool2, #tool3 with actual URLs or create linked pages. -->
+      </ul>
+      <div class="mt-6 text-center">
+        <button class="btn bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md">Access Tools</button>
+      </div>
+      <!-- Note: Add a form here (e.g., email signup) for tool access: <form><input type="email" placeholder="Enter email"><button type="submit">Subscribe</button></form>. -->
+    </div>
+  </section>
+
+  <!-- Opportunities Section -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-8 text-center">Market Opportunities</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">Local Cooperatives</h3>
+          <p class="text-sm text-gray-600">Join cooperatives to negotiate better prices as of July 2025.</p>
+          <!-- Note: Add a membership form or contact link (e.g., <a href="contact.html">Join Now</a>). -->
+        </div>
+        <div class="card p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+          <h3 class="text-xl font-semibold text-green-800 mb-3">International Trade</h3>
+          <p class="text-sm text-gray-600">Explore export markets for high-value crops this season.</p>
+          <!-- Note: Include a case study or success story (e.g., "Farmer X exported 500 tons"). -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 px-4 bg-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 mb-6">Stay Ahead in the Market</h2>
+      <p class="text-lg text-gray-700 mb-6">Subscribe for daily market updates and expert advice starting July 22, 2025.</p>
+      <button class="btn bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md">Subscribe Now</button>
+      <!-- Note: Integrate a modal popup for sign-up (e.g., using JavaScript) to enhance user engagement. -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white px-4 py-8 text-center">
+    <p class="text-sm">© 2025 Agrotech Insight. All rights reserved.</p>
+    <!-- Note: Add social media links (e.g., <a href="facebook.com"><i class="fab fa-facebook"></i></a>) for broader reach. -->
+  </footer>
+
+</body>
+</html>
